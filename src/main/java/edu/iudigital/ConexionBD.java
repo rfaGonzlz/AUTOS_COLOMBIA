@@ -9,5 +9,16 @@ public class ConexionBD {
     private static final String URL = "jdbc:mysql://localhost:3306/autos_colombia";
     private static final String USER = "root";
     private static final String PASSWORD = "root";
+
+    public static Connection conectar() {
+
+        try {
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (SQLException e) {
+            System.out.println("Error de conexión: " + e.getMessage());
+            return null;
+        }
+
+    }
 }
 
