@@ -42,6 +42,7 @@ public class CeldaDAO {
 
     }
 
+    // Prueba
     public void liberarCelda(int numero){
 
         String sql = "UPDATE celda SET ocupada=false WHERE numero=?";
